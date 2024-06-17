@@ -62,13 +62,9 @@ To begin, we press the "New Scan" button, and that brings us to this page.
 ![image](https://github.com/mkathia/nessus-lab/assets/113075504/a85b45dd-3a5d-472e-b027-8bcc904dd01b)
 
 We are going to use "Basic Network Scan", and fill out the page provided.
-
-![image](https://github.com/mkathia/nessus-lab/assets/113075504/b3fe3e47-4cb5-48e4-a44f-7dd666e50558)
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/d8640ee3-8755-427e-bbc2-d3d386dc49aa)
 
 The IP address we gave as a target is that of our guest system.
-
-We set the scanner to look through all ports.
-![image](https://github.com/mkathia/nessus-lab/assets/113075504/8cab8474-4b4f-446f-bcae-471cdf430dc2)
 
 Note the "Credentials" page, we will be using that later. For now, that is all the settings we will change.
 
@@ -77,22 +73,35 @@ Pressing "save" brings us to this page, where we can see our newly created scan.
 ![image](https://github.com/mkathia/nessus-lab/assets/113075504/875f5ef3-ce16-45f8-af57-dd17ece230b0)
 
 We are going to go ahead and run this scan.
-
 ![image](https://github.com/mkathia/nessus-lab/assets/113075504/53ad496d-c0a2-456c-a925-8c5fae8d0546)
 
+Once completed, we come across this screen.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/37e4c17f-9b85-44f7-8ec5-79782c623841)
 
+This "Hosts" screen gives us a high-level overview of the scan results. When we go to vulnerabilities, we get a more specific view of what was found. 
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/860e9a84-03cb-41c3-9853-537003804604)
 
+When we click on the specific issues, we can get an even more specific analysis. For example, if we click on "SMB Signing not required", we see this.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/525ff134-644d-4474-9312-6b7594a2c7f3)
 
+This is a basic introduction into scanning. Our next step is to ensure that Nessus can properly crawl through our system.
 
+# Enabling Credentialed Scans
 
+Some modifications need to be made to ensure Nessus can properly search through our system. The first thing we need to do is enable remote registry. We do this through services.msc.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/e825cd42-995c-4213-ad3d-c4852a0f3a1a)
 
+I proceed to find it, enable automatic startup, and start the service.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/08d17f25-7893-432d-8478-91ec05bc7ffe)
 
+Next, we ensure network discovery and file/printer sharing are on, through the Control Panel.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/6be0ea9f-64e9-4119-900f-a5921cce3e9a)
 
+We're also going to add a key to registry editor to allow the remote account to connect.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/b0de1e9a-44f7-46e7-941f-9e1b10963ad0)
 
+At this point, we restart our virtual machine.
 
+# 1st Credentialed Scan
 
-
-
-
-
-
+After rebooting our machine, we need to modify Nessus to have credentialed scans. We provide it our login credentials so it can search through our virtual machine.
