@@ -17,7 +17,7 @@ We then give Virtualbox the ISO, and go through all the standard configuration s
 ![win10processors](https://github.com/mkathia/malware-analysis/assets/113075504/4fb8f41d-7e3d-477b-81e1-e15a231c978c)
 
 After this setup, we go through Windows' setup steps. Then, we have our functional virtual machine.
-![Screenshot 2024-06-01 191610](https://github.com/mkathia/malware-analysis/assets/113075504/8cc537e1-ea9a-4fd4-a18e-ef298838a13b)
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/c02e3597-fa26-4f16-9514-d4bee8ad26d9)
 
 Next, we proceed to obtain [Nessus Essentials](https://www.tenable.com/products/nessus/nessus-essentials) by filling out the form to get an activation key.
 ![image](https://github.com/mkathia/nessus-lab/assets/113075504/d84a4f27-ff91-42b5-9a4c-acede8a32d9a)
