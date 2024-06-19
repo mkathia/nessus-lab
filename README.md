@@ -104,4 +104,67 @@ At this point, we restart our virtual machine.
 
 # 1st Credentialed Scan
 
-After rebooting our machine, we need to modify Nessus to have credentialed scans. We provide it our login credentials so it can search through our virtual machine.
+After rebooting our machine, we need to modify Nessus to have credentialed scans. We provide it our login credentials so it can search through our virtual machine. We do this by going into the aforementioned "credentials" tab and filling out the information so it can properly search through the machine.
+
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/b249544a-0ab1-4912-b444-0ac9d196d569)
+
+After running the scan, we can immediately see significantly more vulnerabilities.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/0c49d021-3ca0-402f-823a-7f6d2b003ccb)
+
+Upon clicking on the "Vulnerabilities" tab, we can see more specifics.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/e99f9fdd-6372-4def-997e-9672095a5c24)
+
+As we can see, the issues are grouped into folders for us. Upon clicking on one of them, "Microsoft Edge" for example, we can get a closer look into these issues.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/0b573df8-105c-4b04-8af3-3742a565468a)
+
+Similarly to before, we can click on each of these vulnerabilities to see specific information about them, along with their solution. A majority of them would be solved with a simple update. 
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/617fbfb1-2d14-46ef-a7be-a6c9a270fa09)
+
+If click on the "Remediations" tab, we can get a high-level overview of what would solve a large number of our vulnerabilities. 
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/52bba02c-46b1-4672-a8ee-486f6068e7e5)
+
+Naturally, these are solid options to harden your device.
+
+# Introducing Vulnerabilities
+
+Before beginning remediation, we're going to install some deprecated software to introduce new vulnerabilities. Our software of choice is going to be Firefox. We find an old version of it, download it, and set it up on our computer.
+
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/61a33790-d10a-44c8-a6c3-6f4b4414671f)
+
+Now that we have an artificially induced vulnerability, we will re-do our scan. Once it's completed, we immediately see more critical vulnerabilities. 
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/b720d483-cc89-4232-8231-942193de9db1)
+
+It's clear that the deprecated software massively exposes the system to threats. Upon taking a closer look at the "Vulnerabilities" tab, we can see the "Mozilla Firefox" fjolder, with an astounding 181 vulnerabilities. 
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/a1ff2502-c75c-4d84-8efe-07fd41c7e6ea)
+
+Of those related vulnerabilities, nearly half of them are critical.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/4a490b5b-c112-42b4-8f12-58e2fcea2a7d)
+
+Looking at the "Remediations" tab, we can see that one of the suggested fixes is updating Firefox, with a massive 1885 vulnerabilities related to it.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/a16d04b8-a7ec-4264-8cb4-715f0cd0cb6a)
+
+We're now going to proceed to remediation.
+
+# Remediation
+
+Our first step in remediation is accessing "appwiz.cpl", which takes us to the "Uninstall or change a program" screen.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/5cd15b14-45b0-4981-ad94-7db080b62380)
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/fe2d8302-4eb0-4404-923d-75128c9ab041)
+
+With this screen, for simplicity's sake, we're going to uninstall Firefox.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/a27f39b3-fe63-48bf-8f8c-73ea5d4ab9e1)
+
+Our next step will be to update the device to grab security patches from Microsoft.
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/ce4155b0-3b84-4a87-9151-7b416230bbc7)
+
+After updates are complete, we re-run our scans.
+
+We can immediately see a massive reduction in amount of vulnerabilities.\
+
+Before:
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/0ce4297b-ba0e-449c-9547-c5e17e470bc4)
+
+After:
+![image](https://github.com/mkathia/nessus-lab/assets/113075504/acf7439e-b396-4e08-8839-a842c935229b)
+
+This concludes the lab.
