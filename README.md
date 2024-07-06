@@ -3,7 +3,7 @@ Images seem small in the page, but can be clicked to expand.
 
 
 # Project Overview
-This project is based on Josh Madakor's ["Nessus Tutorial"](https://www.youtube.com/watch?v=lT6Px9zJM3s&list=PLBGe27gFBzHTZ28rbovKBDczFyzQOGLS_&index=3). The goal of this project will be to improve our understanding of vulnerability scanning and vulnerability remediation. We will be using Nessus Essentials to scan a local virtual machine running the Windows 10 Enterprise operating system. We are going to run credentialed scans to discover vulnerabilities, remediate remediate them, and finally rescan to verify. 
+This project is based on Josh Madakor's ["Nessus Tutorial"](https://www.youtube.com/watch?v=lT6Px9zJM3s&list=PLBGe27gFBzHTZ28rbovKBDczFyzQOGLS_&index=3). The goal of this project will be to improve our understanding of vulnerability scanning and vulnerability remediation. We will be using Nessus Essentials to scan a local virtual machine running the Windows 10 Enterprise operating system. We are going to run credentialed scans to discover vulnerabilities, remediate them, and finally rescan to verify. 
 
 # Setup
 
